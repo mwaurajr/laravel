@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('body');
-            $table->foreignId('cateroy_id')->nullable();
+            $table->foreignId('cateroy_id')->default(1);
             $table->timestamps();
         });
     }

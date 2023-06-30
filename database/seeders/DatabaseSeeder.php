@@ -22,11 +22,11 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         $categories = [
-           ['name' => 'family'],
-           ['name' => 'software'],
-           ['name' => 'medicine'],
-           ['name' => 'law'],
-           ['name' => 'general'],
+           ['name' => 'family', 'post_id'=> 1],
+           ['name' => 'software','post_id'=> 2],
+           ['name' => 'medicine', 'post_id'=> 3],
+           ['name' => 'law', 'post_id'=> 4],
+           ['name' => 'general', 'post_id'=> 5],
 
        ];
 
