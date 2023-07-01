@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\HomeController;
-
-
 use App\Models\Post;
 use Illuminate\Http\Request;
 

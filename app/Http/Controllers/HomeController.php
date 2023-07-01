@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public static function index()
+    public function index()
     {
-        $posts = Post::latest()->take(5)->get();
+        $posts = Post::with('category')->latest()->take(5)->get();
         return view('home', ['posts' => $posts]);
     }
 

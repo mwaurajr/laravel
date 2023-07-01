@@ -22,7 +22,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            
+
         }
 
         .site-title {
@@ -54,10 +54,11 @@
 <div class="container">
     <h1 class="site-title">My Test</h1>
     @foreach($posts as $post)
-        <div class="post">
-            <h2 class="post-title">{{$post->title}}</h2>
-            <p class="post-body">{{$post->body}}</p>
-        </div>
+        <ul class="post">
+            <h1 class="post-title">{{$post->title}}</h1>
+            <h6><li class="post-category">{{$post->category->name}}</li></h6>
+            <li class="post-body">{{$post->body}}</li>
+        </ul>
     @endforeach
 </div>
 </body>
