@@ -11,15 +11,17 @@ class CategoryController extends Controller
     {
         $category = $request->input('category');
 
-        $query = Post::latest();
+        $query = Post::with('category')->latest();
 
         if ($category) {
-            $query->where('category_id', $category);
+            $query->whereHas('category', function ($query) use ($category) {
+                $query->where('name', $category);
+            });
         }
 
         $posts = $query->get();
 
-        return view('home.index', compact('posts'));
+        return view('home', compact('posts'));
     }
 
 }
