@@ -21,7 +21,7 @@ class CategoryController extends Controller
 
         $posts = $query->get();
 
-        return view('home', compact('posts'));
+        return view('home.index', compact('posts'));
     }
 
 }

@@ -19,7 +19,7 @@ class PostFactory extends Factory
     {
         return [
             'body' => fake()->paragraphs(5),
-            'title' => fake()->words(5)
+            'content' => fake()->words(5)
         ];
     }
 }

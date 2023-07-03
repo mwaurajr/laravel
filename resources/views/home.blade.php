@@ -53,13 +53,12 @@
 <body>
 <div class="container">
     <h1 class="site-title">My Test</h1>
-    @foreach($posts as $post)
-        <ul class="post">
-            <h1 class="post-title">{{$post->title}}</h1>
-            <h6><li class="post-category">{{$post->category->name}}</li></h6>
-            <li class="post-body">{{$post->body}}</li>
-        </ul>
-    @endforeach
+    <h1>Posts</h1>
+    <ul>
+        @foreach ($posts as $post)
+            <li>{{ $post->title }}</li>
+        @endforeach
+    </ul>
 </div>
 </body>
 </html>

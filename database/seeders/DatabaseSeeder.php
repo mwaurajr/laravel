@@ -21,37 +21,46 @@ class DatabaseSeeder extends Seeder
 
         User::factory(10)->create();
 
-        $categories = [
-           ['name' => 'family', 'post_id'=> 1],
-           ['name' => 'software','post_id'=> 2],
-           ['name' => 'medicine', 'post_id'=> 3],
-           ['name' => 'law', 'post_id'=> 4],
-           ['name' => 'general', 'post_id'=> 5],
-
-       ];
-
-        foreach ($categories as $category) {
-            Category::create($category);
-        }
+//        $categories = [
+//           ['name' => 'family', 'post_id'=> 1],
+//           ['name' => 'software','post_id'=> 2],
+//           ['name' => 'medicine', 'post_id'=> 3],
+//           ['name' => 'law', 'post_id'=> 4],
+//           ['name' => 'general', 'post_id'=> 5],
+//
+//       ];
 
 
-
-        $postsData = [
-            ['title' => 'Test User 1', 'body' => 'test1@bwequiiiiidwejiooojdowjiedgygbjkqgusuiqwghduiwqdyhiuwedyeydiyhdiqwyiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiidody.com'],
-            ['title' => 'Test User 2', 'body' => 'tesduqwwwwwwwwwdjjjjjjjjjjjjjjjjjwewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwt2@body.com'],
-            ['title' => 'Test User 3', 'body' => 'tesdnwqiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit3@body.com'],
-            ['title' => 'Test User 4', 'body' => 'test4jdoqwpppppddddddddddddddddwejppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp@body.com'],
-            ['title' => 'Test User 5', 'body' => 'test5jdopqwwwdiiiiiiiiiiiiiiiwejwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww@body.com'],
-            ['title' => 'Test User 6', 'body' => 'tesqbudwidhuqiowennnnnnnnnnnnnnnnnnnnnnnnnnnnwdoqhduhquwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwdt6@body.com'],
-            ['title' => 'Test User 7', 'body' => 'tesqduwwwwwwwdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwt7@body.com'],
-            ['title' => 'Test User 8', 'body' => 'tdqwiooooojjjjjjdeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeejjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjest8@body.com'],
-            ['title' => 'Test User 9', 'body' => 'testdqwiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii9@body.com'],
-            ['title' => 'Test User 10', 'body' => 'testdqwiojjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj90@body.com'],
-            ['title' => 'Test User 11', 'body' => 'tesdjiqwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwt80@body.com'],
+        $sampleData = [
+            [
+                'title' => 'Sample Post 1',
+                'category_id' => 1,
+                'content' => 'This is the content of Sample Post 1.',
+            ],
+            [
+                'title' => 'Sample Post 2',
+                'category_id' => 2,
+                'content' => 'This is the content of Sample Post 2.',
+            ],
+            [
+                'title' => 'Sample Post 3',
+                'category_id' => 1,
+                'content' => 'This is the content of Sample Post 3.',
+            ],
+            [
+                'title' => 'Sample Post 4',
+                'category_id' => 3,
+                'content' => 'This is the content of Sample Post 4.',
+            ],
+            [
+                'title' => 'Sample Post 5',
+                'category_id' => 2,
+                'content' => 'This is the content of Sample Post 5.',
+            ],
         ];
 
-        foreach ($postsData as $postData) {
-            Post::create($postData);
+        foreach ($sampleData as $data) {
+            Post::create($data);
         }
 
     }

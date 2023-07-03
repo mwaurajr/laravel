@@ -13,6 +13,6 @@ use App\Http\Controllers\HomeController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/posts/{category?}', [HomeController::class, 'index'])->name('home');
 

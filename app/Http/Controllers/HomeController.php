@@ -7,11 +7,19 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index($category = null)
     {
-        $posts = Post::with('category')->latest()->take(5)->get();
-        return view('home', ['posts' => $posts]);
+        // Retrieve the latest five posts from the Post model
+        $query = Post::latest()->take(5);
+
+        if ($category) {
+            // Filter posts by category if the category parameter is provided
+            $query->where('category_id', $category);
+        }
+
+        $posts = $query->get();
+
+        // Pass the retrieved posts to a view for display
+        return view('home', compact('posts'));
     }
-
-
 }
