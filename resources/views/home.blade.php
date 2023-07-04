@@ -52,11 +52,14 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="site-title">My Test</h1>
+    <h1 class="site-title">My Blog</h1>
     <h1>Posts</h1>
     <ul>
         @foreach ($posts as $post)
-            <li>{{ $post->title }}</li>
+            <h1>
+                <li>{{ $post->title }}</li>
+            </h1>
+            <li>{{ $post->content }}</li>
         @endforeach
     </ul>
 </div>
